@@ -1,9 +1,7 @@
 import React from "react";
 
-class StorePicker extends React.Component {
-    render() {
-        return (
-            <React.Fragment>
+const StorePicker = () => (
+    <React.Fragment>
                 <form className="store-selector">
                 <h2>Enter a Store</h2>
                 <input placeholder="Store Name..." 
@@ -12,8 +10,6 @@ class StorePicker extends React.Component {
                 <button type="submit">VISIT STORE ➡</button>
                 </form>
             </React.Fragment>
-        )
-    }
-}
+);
 
 export default StorePicker
