@@ -16,4 +16,4 @@ const Header = ({ tagline }) => (
     </header>
 );
 
-export default Header
+export default Header;

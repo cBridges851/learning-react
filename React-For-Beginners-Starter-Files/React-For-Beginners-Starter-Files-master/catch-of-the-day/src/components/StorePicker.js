@@ -12,4 +12,4 @@ const StorePicker = () => (
     </React.Fragment>
 );
 
-export default StorePicker
+export default StorePicker;
