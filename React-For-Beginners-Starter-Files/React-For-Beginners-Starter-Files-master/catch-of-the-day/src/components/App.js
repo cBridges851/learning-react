@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./Header";
 import Inventory from "./Inventory";
 import Order from "./Order";
+import sampleFishes from "../sample-fishes.js"
 
 class App extends React.Component {
     state = {
@@ -13,9 +14,11 @@ class App extends React.Component {
         // Copy existing state
         const fishes = { ...this.state.fishes };
         fishes[`fish${Date.now()}`] = fish;
-        this.setState({
-            fishes
-        });
+        this.setState({fishes});
+    }
+
+    loadSampleFishes = () => {
+        this.setState({fishes:sampleFishes})
     }
 
     render() {
@@ -23,7 +26,7 @@ class App extends React.Component {
             <div className="catch-of-the-day">
                 <Header tagline="Fresh Seafood Market"></Header>
                 <Order></Order>
-                <Inventory addFish={this.addFish}></Inventory>
+                <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes}></Inventory>
             </div>
         )
     }
