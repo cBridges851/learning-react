@@ -5,11 +5,16 @@ import Order from "./Order";
 import sampleFishes from "../sample-fishes.js"
 import Fish from "./Fish.js";
 import base from "../base.js";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
     state = {
         fishes: {},
         order: {}
+    }
+
+    static propTypes = {
+        match: PropTypes.object
     }
 
     componentDidMount() {
@@ -99,5 +104,9 @@ class App extends React.Component {
         )
     }
 }
+
+Header.propTypes = {
+    tagline: PropTypes.string.isRequired
+};
 
 export default App;
