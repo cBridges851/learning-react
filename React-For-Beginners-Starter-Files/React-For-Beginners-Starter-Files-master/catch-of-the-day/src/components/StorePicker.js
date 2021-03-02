@@ -1,6 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class StorePicker extends React.Component {
+    static propTypes = {
+        history: PropTypes.object
+    }
     storeInput = React.createRef();
 
     goToStore = event => {
