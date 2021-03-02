@@ -99,7 +99,8 @@ class App extends React.Component {
                     addFish={this.addFish} 
                     updateFish={this.updateFish}
                     loadSampleFishes={this.loadSampleFishes}
-                    deleteFish={this.deleteFish}></Inventory>
+                    deleteFish={this.deleteFish}
+                    storeId={this.props.match.params.storeId}></Inventory>
             </div>
         )
     }
